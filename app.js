@@ -82,3 +82,70 @@ var array=["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio","Julio", "Agost
 array=array.slice(4,11); //podemos simplemente utilizar los valores numericos en vez de tener que recorrer el array para encontrar los meses
                         //ya que si tenemos un array con los meses ordenados podemos tomar como precondicion que los meses van a estar en su indice correspondiente
 console.log(array);
+
+// 4. If Else
+// a. Crear un número aleatorio entre 0 y 1 utilizando la función Math.random(), si elvalor es mayor o igual que 0,5 mostrar una alerta con el mensaje “Greater than 0,5” y 
+// sino un alerta con el mensaje “Lower than 0,5”.
+// b. Crear una variable “Age” que contenga un número entero entre 0 y 100 ymuestre los siguientes mensajes de alerta:
+// i. “Bebe” si la edad es menor a 2 años;
+// ii. “Niño” si la edad es entre 2 y 12 años;
+// iii. “Adolescente” entre 13 y 19 años;
+// iv. “Joven” entre 20 y 30 años;
+// v. “Adulto” entre 31 y 60 años;
+// vi. “Adulto mayor” entre 61 y 75 años;
+// vii. “Anciano” si es mayor a 75 años.
+num=Math.random();
+if (num > 0,5){
+    console.log("Greater than 0,5");
+}
+else{
+    console.log("Lower than 0,5");
+}
+
+age= Math.floor(Math.random()*101);
+if (age<2){
+    console.log("Bebe");
+}
+else if (age>=2 && age < 12){
+    console.log("Niño");
+}
+else if (age>=13 && age < 19){
+    console.log("Adolescente");
+}
+else if (age>=20 && age < 30){
+    console.log("Joven");
+}
+else if (age>=31 && age < 60){
+    console.log("Adulto");
+}
+else if (age>=61 && age < 75){
+    console.log("Adulto mayor");
+}
+else if (age>75){
+    console.log("Anciano");
+}
+
+// 5. For
+// a. Crear un array que contenga 5 palabras y recorrer dicho array utilizando unbucle for de JavaScript para mostrar una alerta utilizando cada una de laspalabras.
+// b. Al array anterior convertir la primera letra de cada palabra en mayúscula ymostrar una alerta por cada palabra modificada.
+// c. Crear una variable llamada “sentence” que tenga un string vacío, luego al arraydel punto a) recorrerlo con un bucle for para ir guardando cada palabra dentro dela variable
+//  sentence. Al final mostrar una única alerta con la cadena completa.
+//  d. Crear una array vacío y con un bucle for de 10 repeticiones. Llenar el array conel número de la repetición, es decir que al final de la ejecución del 
+//  bucle fordebería haber 10 elementos dentro del array, desde el número 0 hasta al número9. Mostrar por la consola del navegador el array final (utilizar console.log)
+
+array=["Hola","mundo", "como", "estas", "?"]
+
+for (x in array){
+    console.log(array[x]);
+}
+for (x in array){
+    array[x]=array[x][0].toUpperCase()+array[x].substring(1,array[x].length);
+    console.log(array[x]);
+}
+console.log(array);
+
+array=[];
+for (i=0; i<10; i++){
+    array.push(i);
+}
+console.log(array);
